@@ -1,0 +1,16 @@
+{
+  "name": "dashboardservice-microservice",
+  "version": "1.0.0",
+  "description": "Express microservice exposing Looker dashboard management endpoints.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@looker/sdk-node": "^25.16.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase": "^12.4.0"
+  }
+}
