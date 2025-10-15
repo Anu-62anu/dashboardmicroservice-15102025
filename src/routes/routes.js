@@ -47,9 +47,9 @@ const createRoutes = (sdk) => {
     }
   });
 
-  router.get('/api/dashboard/:dashboardId/tiles-with-results', async (req, res) => {
+  router.post('/api/dashboard/tiles-with-results', async (req, res) => {
     try {
-      const { dashboardId } = req.params;
+      const { dashboardId } = req.body;
       if (!dashboardId) {
         return res.status(400).json({
           success: false,
@@ -178,9 +178,9 @@ const createRoutes = (sdk) => {
     }
   });
 
-  router.get('/api/dashboard/:dashboardId/defaults', async (req, res) => {
+  router.post('/api/dashboard/defaults', async (req, res) => {
     try {
-      const { dashboardId } = req.params;
+      const { dashboardId } = req.body;
       if (!dashboardId) {
         return res.status(400).json({ success: false, error: 'dashboardId parameter is required in URL' });
       }
@@ -229,9 +229,9 @@ const createRoutes = (sdk) => {
     }
   });
 
-  router.get('/api/dashboard/:dashboardId/filters', async (req, res) => {
+  router.post('/api/dashboard/filters', async (req, res) => {
     try {
-      const { dashboardId } = req.params;
+      const { dashboardId } = req.body;
       if (!dashboardId) {
         return res.status(400).json({ success: false, error: 'dashboardId parameter is required in URL' });
       }
@@ -243,9 +243,9 @@ const createRoutes = (sdk) => {
     }
   });
 
-  router.get('/api/folder/:folderId/dashboards', async (req, res) => {
+  router.post('/api/folder/dashboards', async (req, res) => {
     try {
-      const { folderId } = req.params;
+      const { folderId } = req.body;
       if (!folderId) {
         return res.status(400).json({ success: false, error: 'folderId parameter is required in URL' });
       }
