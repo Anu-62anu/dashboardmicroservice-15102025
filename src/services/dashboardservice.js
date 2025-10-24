@@ -377,11 +377,11 @@ class DashboardService {
           const query = await this.sdk.ok(this.sdk.create_query(queryConfig));
           const queryResult = await this.sdk.ok(
             this.sdk.run_query({ query_id: query.id, result_format: 'json' })
-          ) as QueryResult[];
+          );
 
           const parsedValues = Array.isArray(queryResult) ? queryResult : [];
           const allValues = parsedValues
-            .map((row: QueryResult) => ({
+            .map((row) => ({
               value: String(row[dimension]),
               count: Number(row[selectedMeasure || 'count']) || 0,
             }))
