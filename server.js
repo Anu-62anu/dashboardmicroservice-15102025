@@ -1,7 +1,7 @@
 const { createApp } = require('./src/app');
 const { initializeSDK } = require('./src/config');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3200;
 
 (async () => {
   try {
